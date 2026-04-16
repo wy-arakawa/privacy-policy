@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MoonPocket Privacy Policy | 月光钱袋隐私政策</title>
+    <meta
+      name="description"
+      content="MoonPocket（月光钱袋）iOS 应用隐私政策，说明本地记账、资产管理、截图导入、OCR、可选 AI 识别、Widget 和 CSV 导出的数据处理方式。"
+    >
+    <style>
+      :root {
+        --bg: #f5f2eb;
+        --card: rgba(255, 253, 248, 0.94);
+        --text: #17201f;
+        --muted: #5f6665;
+        --line: rgba(23, 32, 31, 0.12);
+        --brand: #215e59;
+        --brand-soft: rgba(33, 94, 89, 0.1);
+        --shadow: 0 16px 44px rgba(23, 32, 31, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        padding: 24px 16px 48px;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(197, 163, 111, 0.16), transparent 26%),
+          linear-gradient(180deg, #f8f4ed 0%, var(--bg) 100%);
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Noto Sans SC", "Segoe UI", sans-serif;
+        line-height: 1.68;
+      }
+
+      .wrap {
+        width: min(960px, 100%);
+        margin: 0 auto;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        padding: 24px;
+      }
+
+      .pill {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--brand-soft);
+        color: var(--brand);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 34px;
+        line-height: 1.1;
+      }
+
+      h2 {
+        margin: 28px 0 10px;
+        font-size: 22px;
+      }
+
+      h3 {
+        margin: 22px 0 8px;
+        font-size: 17px;
+      }
+
+      p, li {
+        font-size: 15px;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .meta {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li + li {
+        margin-top: 10px;
+      }
+
+      .callout {
+        margin-top: 14px;
+        padding: 14px 16px;
+        border-radius: 18px;
+        background: rgba(33, 94, 89, 0.08);
+        border: 1px solid rgba(33, 94, 89, 0.16);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <article class="card">
+        <div class="pill">MoonPocket / 月光钱袋</div>
+        <h1>Privacy Policy<br>隐私政策</h1>
+        <p class="muted">
+          Effective date: 2026-04-16<br>
+          App bundle ID: com.jujuju.moonpocket
+        </p>
+
+        <h2>中文</h2>
+        <p>
+          月光钱袋（MoonPocket）是一款以本地优先为原则的 iOS 记账与资产管理应用。
+          本隐私政策说明应用在本地记账、截图导入、OCR 识别、可选 AI 辅助识别、资产管理、Widget 展示和 CSV 导出过程中如何处理数据。
+        </p>
+
+        <h3>1. 我们处理哪些数据</h3>
+        <ul>
+          <li>你主动录入或确认的记账数据，包括金额、收支类型、分类、备注、购买平台、订单号、日期时间、自定义分类等。</li>
+          <li>你主动录入或维护的资产数据，包括资产名称、资产类型、当前价值、数量、持有机构或品牌、记录日期、备注和自定义资产类型。</li>
+          <li>你选择导入的截图或图片，以及从剪贴板发起的截图导入请求。</li>
+          <li>OCR 提取出的文字结果，以及基于识别结果生成的待确认草稿。</li>
+          <li>应用设置数据，例如应用语言偏好、Widget 汇总快照、待处理导入元数据等。</li>
+          <li>你主动输入的 DeepSeek API Key，仅在你启用 AI 识别时保存。</li>
+        </ul>
+
+        <h3>2. 本地处理与本地保存</h3>
+        <ul>
+          <li>账本数据和资产数据默认保存在设备本地数据库中，不要求注册账号。</li>
+          <li>默认 OCR 使用 Apple 设备本地能力完成。</li>
+          <li>截图导入、剪贴板导入和 Widget 同步会使用 App Group 共享容器保存临时文件或摘要数据。</li>
+          <li>DeepSeek API Key 保存在 iOS Keychain 中。</li>
+          <li>资产页面默认启用系统身份验证保护，应用会调用 Face ID 或设备密码来保护该页面内容。</li>
+        </ul>
+
+        <div class="callout">
+          默认情况下，月光钱袋的核心记账、资产管理和 OCR 流程以本地处理为主。
+        </div>
+
+        <h3>3. 何时会发送到第三方</h3>
+        <p>
+          只有在你主动配置 DeepSeek API Key 并启用 AI 识别时，应用才会向 DeepSeek 发送数据。
+        </p>
+        <ul>
+          <li>发送内容为 OCR 提取出的文本和结构化提取请求。</li>
+          <li>应用设计上发送的是 OCR 文本，而不是原始截图图片。</li>
+          <li>你可以随时移除 API Key，从而停止该功能。</li>
+          <li>第三方服务对数据的处理受其自身条款和隐私政策约束。</li>
+        </ul>
+
+        <h3>4. 权限与系统能力</h3>
+        <ul>
+          <li>照片权限：仅在你主动选择导入截图或图片时使用。</li>
+          <li>剪贴板读取：仅在你主动触发“从剪贴板导入截图”流程时使用。</li>
+          <li>Face ID / 设备密码：仅用于保护资产页面访问。</li>
+          <li>App Group / Widget：用于共享 Widget 汇总快照与临时导入文件。</li>
+        </ul>
+
+        <h3>5. 导出与保存期限</h3>
+        <ul>
+          <li>你可以主动将记录导出为 CSV 文件。</li>
+          <li>CSV 文件会先生成在设备临时目录，再通过系统分享面板由你自行发送。</li>
+          <li>本地账本数据和资产数据会一直保留在设备上，直到你删除内容或卸载应用。</li>
+          <li>DeepSeek API Key 会保留在 Keychain，直到你移除它或删除应用。</li>
+          <li>临时截图和导入元数据会在流程完成后尝试清理；如果流程中断，可能在本地短暂保留。</li>
+        </ul>
+
+        <h3>6. 我们不会做什么</h3>
+        <ul>
+          <li>不会默认把你的账单原图上传到我们的服务器。</li>
+          <li>不会默认把你的资产数据同步到我们的服务器。</li>
+          <li>不会集成广告 SDK，不会出售你的数据。</li>
+          <li>不会默认收集姓名、手机号、通讯录、精确位置、健康数据等与核心功能无关的信息。</li>
+        </ul>
+
+        <h3>7. 你的控制权</h3>
+        <ul>
+          <li>你可以编辑或删除记账记录和资产记录。</li>
+          <li>你可以决定是否启用 AI 识别，并随时移除 API Key。</li>
+          <li>你可以修改应用语言、导出 CSV，或删除应用来移除本地数据。</li>
+          <li>你可以通过 iOS 系统设置撤销照片权限。</li>
+        </ul>
+
+        <h3>8. 联系方式</h3>
+        <p>如你对本隐私政策有疑问，请通过 App Store 页面中展示的开发者联系方式与我们联系。</p>
+
+        <h2>English</h2>
+        <p>
+          MoonPocket is an iOS app focused on local-first expense tracking and asset management.
+          This Privacy Policy explains how data is handled for bookkeeping, screenshot import, OCR,
+          optional AI-assisted recognition, asset management, widgets, and CSV export.
+        </p>
+
+        <h3>1. Data We Process</h3>
+        <ul>
+          <li>Expense records you enter or confirm, including amount, type, category, note, platform, order number, date and time, and custom categories.</li>
+          <li>Asset records you enter or maintain, including asset name, asset type, current value, quantity, holder or brand, record date, note, and custom asset types.</li>
+          <li>Screenshots or images you choose to import, and clipboard-based screenshot import requests.</li>
+          <li>OCR text and draft records generated from recognition results.</li>
+          <li>App settings data, such as language preference, widget snapshots, and pending import metadata.</li>
+          <li>Your DeepSeek API Key, only if you manually provide it to enable AI recognition.</li>
+        </ul>
+
+        <h3>2. Local Processing and Local Storage</h3>
+        <ul>
+          <li>Expense data and asset data are stored locally on your device.</li>
+          <li>By default, OCR is performed on-device using Apple system capabilities.</li>
+          <li>Screenshot import, clipboard import, and widget syncing use the shared App Group container for temporary files and summarized data.</li>
+          <li>Your DeepSeek API Key is stored in the iOS Keychain.</li>
+          <li>The asset page is protected with system authentication using Face ID or the device passcode.</li>
+        </ul>
+
+        <h3>3. When Data Is Sent to a Third Party</h3>
+        <ul>
+          <li>Data is sent to DeepSeek only if you enable AI recognition and provide your own API Key.</li>
+          <li>The app is designed to send OCR-extracted text, not the original screenshot image.</li>
+          <li>You may stop this at any time by removing the API Key inside the app.</li>
+          <li>Third-party processing remains subject to the third party's own terms and privacy policy.</li>
+        </ul>
+
+        <h3>4. Permissions and System Features</h3>
+        <ul>
+          <li>Photo Library access is used only when you choose to import a screenshot or image.</li>
+          <li>Clipboard access is used only when you explicitly trigger the clipboard screenshot import flow.</li>
+          <li>Face ID or device passcode is used only to protect the asset page.</li>
+          <li>App Group storage is used for widget snapshot data and temporary import files.</li>
+        </ul>
+
+        <h3>5. Export and Retention</h3>
+        <ul>
+          <li>You may export your records as CSV through the iOS share sheet.</li>
+          <li>CSV files are created in a local temporary directory and shared only when you explicitly choose to do so.</li>
+          <li>Local expense and asset records remain on your device until you delete them or uninstall the app.</li>
+          <li>Your DeepSeek API Key remains in the Keychain until you remove it or uninstall the app.</li>
+          <li>Temporary screenshot files and import metadata are intended to be removed after processing, but may remain locally for a limited time if a flow is interrupted.</li>
+        </ul>
+
+        <h3>6. What We Do Not Do</h3>
+        <ul>
+          <li>We do not upload your bill images to our servers by default.</li>
+          <li>We do not sync your asset records to our servers by default.</li>
+          <li>We do not include ad SDKs and we do not sell your data.</li>
+          <li>We do not collect unrelated personal data such as your contacts, precise location, or health data by default.</li>
+        </ul>
+
+        <h3>7. Your Controls</h3>
+        <ul>
+          <li>You can edit or delete expense records and asset records.</li>
+          <li>You can choose whether to enable AI recognition and remove your API Key at any time.</li>
+          <li>You can change the app language, export CSV, or remove the app to delete local data.</li>
+          <li>You can revoke photo access through iOS Settings.</li>
+        </ul>
+
+        <h3>8. Contact</h3>
+        <p>If you have questions about this Privacy Policy, please use the developer contact information shown on the App Store page.</p>
+      </article>
+    </div>
+  </body>
+</html>
