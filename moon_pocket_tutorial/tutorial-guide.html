@@ -75,6 +75,13 @@
       height: auto;
     }
 
+    .split {
+      margin: 34px 0 6px;
+      height: 1px;
+      border: 0;
+      background: rgba(24, 70, 64, 0.14);
+    }
+
     a {
       color: #2d6d4b;
       font-weight: 600;
@@ -139,6 +146,35 @@
   <section class="step">
     <h2>3. 如需使用 DeepSeek AI 识别</h2>
     <p>如需启用 AI 识别，请前往 <a href="https://platform.deepseek.com/">platform.deepseek.com</a> 注册账号并创建 API Key，然后回到 App 的“设置 → AI 识别”中填入。未配置 API Key 时，App 仍可继续使用本地 OCR 识别。</p>
+  </section>
+
+  <hr class="split">
+
+  <h1>MoonPocket Tutorial</h1>
+  <p class="lead">Use Shortcuts to send a payment screenshot into the app, then review and save the result. The recommended flow is the following 3-step setup.</p>
+
+  <section class="step">
+    <h2>1. Create a Shortcut</h2>
+    <p>Add these 3 actions as shown below: <code>Take Screenshot</code>, <code>Copy Screenshot to Clipboard</code>, and <code>Import Screenshot from Clipboard</code>. It is recommended to turn off “Show When Run” so the import feels smoother.</p>
+    <div class="shot">
+      <img src="tutorial-step-1.png" alt="Shortcut configuration example">
+    </div>
+  </section>
+
+  <section class="step">
+    <h2>2. Always allow paste from other apps</h2>
+    <p>When you run the shortcut for the first time, set “Paste from Other Apps” to “Allow” in iOS settings. MoonPocket reads the clipboard only when you actively run the shortcut to import a screenshot. It does not keep listening or repeatedly read clipboard contents in the background.</p>
+    <div class="shot">
+      <img src="tutorial-step-2.png" alt="Paste permission setting example">
+    </div>
+    <div class="note">
+      This permission is required so the shortcut can hand the screenshot to the app. Without it, the app cannot read the screenshot you just copied to the clipboard.
+    </div>
+  </section>
+
+  <section class="step">
+    <h2>3. If you want DeepSeek AI recognition</h2>
+    <p>To enable AI recognition, visit <a href="https://platform.deepseek.com/">platform.deepseek.com</a>, create an account, generate an API Key, and then paste it into “Settings → AI 识别” inside the app. If no API Key is configured, the app can still continue with local OCR recognition.</p>
   </section>
 </body>
 </html>
