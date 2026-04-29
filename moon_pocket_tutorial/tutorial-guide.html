@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MoonPocket 使用教程</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+      background: transparent;
+      color: #1f2a2e;
+    }
+
+    body {
+      margin: 0;
+      padding: 28px 22px 52px;
+      line-height: 1.68;
+      font-size: 16px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      line-height: 1.16;
+      color: inherit;
+    }
+
+    .lead {
+      margin: 0 0 22px;
+      color: rgba(31, 42, 46, 0.76);
+    }
+
+    .step {
+      margin-top: 26px;
+      padding: 20px 18px;
+      border: 1px solid rgba(24, 70, 64, 0.14);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.58);
+      backdrop-filter: blur(10px);
+    }
+
+    .step h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.28;
+      color: inherit;
+    }
+
+    .step p {
+      margin: 0;
+      color: rgba(31, 42, 46, 0.8);
+    }
+
+    .note {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(184, 220, 199, 0.14);
+      border: 1px solid rgba(79, 138, 91, 0.12);
+      color: rgba(31, 42, 46, 0.82);
+    }
+
+    .shot {
+      margin-top: 16px;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(24, 70, 64, 0.14);
+      background: rgba(255, 255, 255, 0.75);
+    }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: #2d6d4b;
+      font-weight: 600;
+      text-decoration-thickness: 1.5px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color: #f4f0e9;
+      }
+
+      .lead,
+      .step p,
+      .note {
+        color: rgba(244, 240, 233, 0.78);
+      }
+
+      .step {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+
+      .note {
+        background: rgba(184, 220, 199, 0.08);
+        border-color: rgba(184, 220, 199, 0.14);
+      }
+
+      .shot {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+
+      a {
+        color: #b8dcc7;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>MoonPocket 使用教程</h1>
+  <p class="lead">用快捷指令把支付截图导入 App，完成识别、确认和保存。当前推荐流程固定为以下 3 步。</p>
+
+  <section class="step">
+    <h2>1. 新建快捷指令</h2>
+    <p>按下图添加 3 个动作：`截屏`、`将截屏拷贝至剪贴板`、`从剪贴板导入截图`。建议关闭“运行时显示”，这样导入会更顺。</p>
+    <div class="shot">
+      <img src="tutorial-step-1.png" alt="快捷指令配置示意图">
+    </div>
+  </section>
+
+  <section class="step">
+    <h2>2. 始终允许从其他 App 粘贴</h2>
+    <p>第一次运行时，请在系统设置里把“从其他 App 粘贴”设为“允许”。MoonPocket 只会在你主动运行快捷指令导入截图时读取剪贴板中的截图内容，不会持续监听，也不会在后台反复读取。</p>
+    <div class="shot">
+      <img src="tutorial-step-2.png" alt="系统粘贴权限设置示意图">
+    </div>
+    <div class="note">
+      这一步是为了让快捷指令把截图交给 App。不给权限时，App 无法读取刚刚复制到剪贴板的截图。
+    </div>
+  </section>
+
+  <section class="step">
+    <h2>3. 如需使用 DeepSeek AI 识别</h2>
+    <p>如需启用 AI 识别，请前往 <a href="https://platform.deepseek.com/">platform.deepseek.com</a> 注册账号并创建 API Key，然后回到 App 的“设置 → AI 识别”中填入。未配置 API Key 时，App 仍可继续使用本地 OCR 识别。</p>
+  </section>
+</body>
+</html>
