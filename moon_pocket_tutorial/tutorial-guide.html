@@ -52,6 +52,24 @@
       color: rgba(31, 42, 46, 0.8);
     }
 
+    .mini-steps {
+      margin: 14px 0 0;
+      padding-left: 22px;
+      color: rgba(31, 42, 46, 0.82);
+    }
+
+    .mini-steps li {
+      margin: 8px 0;
+    }
+
+    code {
+      padding: 2px 6px;
+      border-radius: 8px;
+      background: rgba(24, 70, 64, 0.08);
+      font-family: inherit;
+      font-size: 0.94em;
+    }
+
     .note {
       margin-top: 12px;
       padding: 14px 16px;
@@ -75,6 +93,23 @@
       height: auto;
     }
 
+    .image-steps {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .image-steps figure {
+      margin: 0;
+    }
+
+    .image-steps figcaption {
+      margin: 8px 2px 0;
+      font-size: 14px;
+      line-height: 1.45;
+      color: rgba(31, 42, 46, 0.68);
+    }
+
     .split {
       margin: 34px 0 6px;
       height: 1px;
@@ -95,8 +130,14 @@
 
       .lead,
       .step p,
+      .mini-steps,
+      .image-steps figcaption,
       .note {
         color: rgba(244, 240, 233, 0.78);
+      }
+
+      code {
+        background: rgba(255, 255, 255, 0.10);
       }
 
       .step {
@@ -122,18 +163,114 @@
 </head>
 <body>
   <h1>MoonPocket 使用教程</h1>
-  <p class="lead">用快捷指令把支付截图导入 App，完成识别、确认和保存。当前推荐流程固定为以下 2 步。</p>
+  <p class="lead">用快捷指令把支付截图导入 App，完成识别、确认和保存。当前推荐流程分为以下 3 部分。</p>
 
   <section class="step">
     <h2>1. 新建快捷指令</h2>
-    <p>按下图添加 3 个动作：`截屏`、`将截屏拷贝至剪贴板`、`从剪贴板导入截图`。建议关闭“运行时显示”，这样导入会更顺。</p>
-    <div class="shot">
-      <img src="tutorial-step-1.png" alt="快捷指令配置示意图">
+    <p>按下面顺序添加动作，最后快捷指令里只保留这 3 个动作：<code>截屏</code>、<code>将截屏拷贝至剪贴板</code>、<code>从剪贴板导入截图</code>。</p>
+    <ol class="mini-steps">
+      <li>打开快捷指令，点右上角 <code>+</code> 新建。</li>
+      <li>在底部搜索操作，准备添加第一个动作。</li>
+      <li>搜索 <code>控制</code>，选择 <code>截屏</code>。</li>
+      <li>搜索并选择 <code>拷贝至剪贴板</code>，让它拷贝上一步的 <code>截屏</code> 结果。</li>
+      <li>回到操作列表，找到并点 <code>月光钱袋</code>。</li>
+      <li>选择 <code>从剪贴板导入截图</code>。</li>
+      <li>检查顺序无误后，建议关闭最后一步的 <code>运行时显示</code>。</li>
+    </ol>
+
+    <div class="image-steps">
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-01-add.jpg" alt="在快捷指令里点右上角加号">
+        </div>
+        <figcaption>1. 点右上角加号。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-02-search.jpg" alt="打开底部操作搜索面板">
+        </div>
+        <figcaption>2. 打开底部搜索操作。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-03-screenshot.jpg" alt="搜索控制并选择截屏">
+        </div>
+        <figcaption>3. 搜索控制，添加截屏。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-04-copy.jpg" alt="选择拷贝至剪贴板">
+        </div>
+        <figcaption>4. 添加拷贝至剪贴板。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-05-app.jpg" alt="在 App 列表中选择月光钱袋">
+        </div>
+        <figcaption>5. 选择月光钱袋。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-06-import.jpg" alt="选择从剪贴板导入截图">
+        </div>
+        <figcaption>6. 选择从剪贴板导入截图。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-07-final.png" alt="最终快捷指令动作顺序">
+        </div>
+        <figcaption>7. 确认最终顺序，并关闭运行时显示。</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="step">
-    <h2>2. 始终允许从其他 App 粘贴</h2>
+    <h2>2. 绑定轻点背面</h2>
+    <p>把刚建好的快捷指令绑定到系统“轻点背面”，以后在支付完成页双击手机背面即可运行导入流程。</p>
+    <ol class="mini-steps">
+      <li>打开系统设置，在搜索框输入 <code>触控</code>，选择辅助功能里的 <code>触控</code>。</li>
+      <li>进入触控页面，向下找到 <code>轻点背面</code>。</li>
+      <li>选择 <code>轻点两下</code>；如果你习惯三下，也可以改选 <code>轻点三下</code>。</li>
+      <li>在快捷指令列表里选择刚创建的 <code>记账儿</code>。</li>
+      <li>返回轻点背面页面，确认 <code>轻点两下</code> 右侧已显示 <code>记账儿</code>。</li>
+    </ol>
+
+    <div class="image-steps">
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-01-touch.jpg" alt="在系统设置搜索触控并选择触控">
+        </div>
+        <figcaption>1. 设置中搜索触控，进入触控页面。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-02-back-tap.jpg" alt="在触控页面找到轻点背面">
+        </div>
+        <figcaption>2. 向下找到轻点背面。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-03-double-tap.jpg" alt="在轻点背面页面选择轻点两下">
+        </div>
+        <figcaption>3. 选择轻点两下。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-04-shortcut.jpg" alt="在快捷指令列表中选择记账儿">
+        </div>
+        <figcaption>4. 在快捷指令列表选择记账儿。</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-05-confirm.jpg" alt="确认轻点两下已绑定记账儿">
+        </div>
+        <figcaption>5. 确认轻点两下已绑定记账儿。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="step">
+    <h2>3. 始终允许从其他 App 粘贴</h2>
     <p>第一次运行时，请在系统设置里把“从其他 App 粘贴”设为“允许”。MoonPocket 只会在你主动运行快捷指令导入截图时读取剪贴板中的截图内容，不会持续监听，也不会在后台反复读取。</p>
     <div class="shot">
       <img src="tutorial-step-2.png" alt="系统粘贴权限设置示意图">
@@ -146,18 +283,114 @@
   <hr class="split">
 
   <h1>MoonPocket Tutorial</h1>
-  <p class="lead">Use Shortcuts to send a payment screenshot into the app, then review and save the result. The recommended flow is the following 2-step setup.</p>
+  <p class="lead">Use Shortcuts to send a payment screenshot into the app, then review and save the result. The recommended setup has 3 parts.</p>
 
   <section class="step">
     <h2>1. Create a Shortcut</h2>
-    <p>Add these 3 actions as shown below: <code>Take Screenshot</code>, <code>Copy Screenshot to Clipboard</code>, and <code>Import Screenshot from Clipboard</code>. It is recommended to turn off “Show When Run” so the import feels smoother.</p>
-    <div class="shot">
-      <img src="tutorial-step-1.png" alt="Shortcut configuration example">
+    <p>Add the actions in this order. The final shortcut should contain only: <code>Take Screenshot</code>, <code>Copy Screenshot to Clipboard</code>, and <code>Import Screenshot from Clipboard</code>.</p>
+    <ol class="mini-steps">
+      <li>Open Shortcuts and tap <code>+</code> in the top-right corner.</li>
+      <li>Use the action search panel at the bottom.</li>
+      <li>Search for <code>Control</code>, then add <code>Take Screenshot</code>.</li>
+      <li>Search for and add <code>Copy to Clipboard</code>. Its input should be the screenshot.</li>
+      <li>Go back to the action list and choose <code>MoonPocket</code>.</li>
+      <li>Select <code>Import Screenshot from Clipboard</code>.</li>
+      <li>Check the final order and turn off <code>Show When Run</code> for the last action.</li>
+    </ol>
+
+    <div class="image-steps">
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-01-add.jpg" alt="Tap the plus button in Shortcuts">
+        </div>
+        <figcaption>1. Tap the plus button.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-02-search.jpg" alt="Open action search">
+        </div>
+        <figcaption>2. Open action search.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-03-screenshot.jpg" alt="Search Control and add Take Screenshot">
+        </div>
+        <figcaption>3. Add Take Screenshot.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-04-copy.jpg" alt="Choose Copy to Clipboard">
+        </div>
+        <figcaption>4. Add Copy to Clipboard.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-05-app.jpg" alt="Choose MoonPocket from the app list">
+        </div>
+        <figcaption>5. Choose MoonPocket.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-06-import.jpg" alt="Choose Import Screenshot from Clipboard">
+        </div>
+        <figcaption>6. Choose Import Screenshot from Clipboard.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-shortcut-07-final.png" alt="Final shortcut action order">
+        </div>
+        <figcaption>7. Check the final order and disable Show When Run.</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="step">
-    <h2>2. Always allow paste from other apps</h2>
+    <h2>2. Assign Back Tap</h2>
+    <p>Bind the shortcut to iOS Back Tap so you can run the import flow by double-tapping the back of your iPhone after payment.</p>
+    <ol class="mini-steps">
+      <li>Open iOS Settings, search for <code>Touch</code>, then choose <code>Touch</code> under Accessibility.</li>
+      <li>On the Touch page, scroll down and open <code>Back Tap</code>.</li>
+      <li>Choose <code>Double Tap</code>. You can choose <code>Triple Tap</code> instead if you prefer.</li>
+      <li>In the Shortcuts list, select the shortcut you just created, such as <code>记账儿</code>.</li>
+      <li>Return to Back Tap and confirm <code>Double Tap</code> shows the shortcut name.</li>
+    </ol>
+
+    <div class="image-steps">
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-01-touch.jpg" alt="Search Touch in iOS Settings and choose Touch">
+        </div>
+        <figcaption>1. Search Touch in Settings.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-02-back-tap.jpg" alt="Find Back Tap on the Touch page">
+        </div>
+        <figcaption>2. Open Back Tap.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-03-double-tap.jpg" alt="Choose Double Tap on the Back Tap page">
+        </div>
+        <figcaption>3. Choose Double Tap.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-04-shortcut.jpg" alt="Select the shortcut from the shortcut list">
+        </div>
+        <figcaption>4. Select the shortcut.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot">
+          <img src="tutorial-backtap-05-confirm.jpg" alt="Confirm Double Tap is assigned to the shortcut">
+        </div>
+        <figcaption>5. Confirm the shortcut is assigned.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="step">
+    <h2>3. Always allow paste from other apps</h2>
     <p>When you run the shortcut for the first time, set “Paste from Other Apps” to “Allow” in iOS settings. MoonPocket reads the clipboard only when you actively run the shortcut to import a screenshot. It does not keep listening or repeatedly read clipboard contents in the background.</p>
     <div class="shot">
       <img src="tutorial-step-2.png" alt="Paste permission setting example">
